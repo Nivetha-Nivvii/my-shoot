@@ -37,22 +37,16 @@
     }
   </style>
   <script type='text/javascript'>
-    // Adsterra popunder delay
-    window.onload = function() {
-      setTimeout(function() {
-        var script = document.createElement('script');
-        script.src = '//shedwriterantler.com/fc/b5/a4/fcb5a428307c543951f62dea2a421207.js';
-        document.body.appendChild(script);
-      }, 2000);
-    };
-
-    // Trigger popunder on any click
-    document.addEventListener('click', function() {
-      var script = document.createElement('script');
+  window.onload = function () {
+    // Delay popunder on load
+    setTimeout(() => {
+      const script = document.createElement('script');
       script.src = '//shedwriterantler.com/fc/b5/a4/fcb5a428307c543951f62dea2a421207.js';
+      script.async = true;
       document.body.appendChild(script);
-    });
-  </script>
+    }, 2000);
+  };
+</script>
 </head>
 <body>
   <div class="circle-image">
